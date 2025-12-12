@@ -1,6 +1,14 @@
-import { createStore } from 'redux'
-import rootReducer from './root-reducer'
+import { configureStore } from '@reduxjs/toolkit'
 
-const store = createStore(rootReducer)
+
+import ContatosReducer from '../store/reducers/reducer-cantatos'
+
+const store = configureStore({
+  reducer: {
+    Contatos: ContatosReducer
+  }
+})
+
+export type RootReducer = ReturnType<typeof store.getState>
 
 export default store

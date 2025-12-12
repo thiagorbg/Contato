@@ -1,4 +1,5 @@
 
+import {  useState } from 'react';
 import UserActionTypes from '../../store/reducers/actions-types';
 import * as s from '../Container/style'
 import { useSelector, useDispatch } from 'react-redux'
@@ -11,6 +12,8 @@ function MainCard() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { currentEdit } = useSelector((rootReducer: any) => rootReducer.userReducer);
   console.log(currentEdit)
+
+  // const  [setEstarSalvando, setEditar] = useState (false)
 
   const dispatch = useDispatch()
 
@@ -32,8 +35,7 @@ function MainCard() {
         <s.Input placeholder="Digite seu E-mail..." type="text" />
         <s.Label htmlFor="">Telefone</s.Label>
         <s.Input placeholder="Digite seu Telefone..." type="text" />
-        <s.Button onClick={login}>Editar</s.Button>
-        <s.Button>Remover</s.Button>
+        <s.Button onClick={login}>adicionar</s.Button>
       </s.Scard>
     </s.Mcard>
   )

@@ -15,4 +15,5 @@ export const Container = styled.div`
   width: 100%;
   margin: 0 auto;
   padding: 40px;
+  list-style: none;
 `

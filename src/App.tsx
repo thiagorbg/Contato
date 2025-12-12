@@ -4,8 +4,7 @@ import store from './store/storeP'
 import { Provider } from 'react-redux'
 import { createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Home from './pages/home'
-import path from 'path'
-import Cadastro from './pages/home/Cadastro'
+import {Cadastro} from './pages/home/Cadastro'
 
 
 function App() {
@@ -14,11 +13,11 @@ function App() {
   const rotas = createBrowserRouter([
     {
       path:'/',
-      element: < Home />
+      element: <Cadastro/>
     },
     {
-      path: '/novo',
-      element: <Cadastro/>
+      path: '/novoo',
+      element: < Home />
     }
   ])
 
