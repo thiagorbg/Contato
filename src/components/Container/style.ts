@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Mcard = styled.div`
+export const Mcard = styled.form`
   border: 2px solid black;
   padding: 20px;
   border-radius: 9px;
