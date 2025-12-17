@@ -10,6 +10,8 @@ export const EstiloGlobal = createGlobalStyle`
   }
 
 `
+
+
 export const Container = styled.div`
   max-width: 1024px;
   width: 100%;
@@ -17,3 +19,7 @@ export const Container = styled.div`
   padding: 40px;
   list-style: none;
 `
+
+
+
+// rgb(43, 46, 51); rgb(25, 27, 31);

@@ -33,6 +33,9 @@ const cadastrasrTarefa = (evento: FormEvent) => {
 function mascara  (){
   if (!nome.trim() || !email.trim() || !telefone){
     alert ('Digite algo no campo')
+    setemail('')
+    setnome('')
+    settelefone('')
   }
 
 }
@@ -40,14 +43,14 @@ function mascara  (){
   return (
     <s.Mcard onSubmit={cadastrasrTarefa}>
       <s.Scard>
-        <s.Titulo>ola</s.Titulo>
-        <s.Label htmlFor=""></s.Label>
+        <s.Titulo>Crie Sua Tafera :</s.Titulo>
+        <s.Label htmlFor="">Nome :</s.Label>
         <s.Input onChange={(e) => setnome(e.target.value)} placeholder="Digite seu Nome..." value={nome} type="text" >
         </s.Input>
-        <s.Label htmlFor="">E-Mail</s.Label>
+        <s.Label htmlFor="">E-Mail :</s.Label>
         <s.Input onChange={(e) => setemail(e.target.value)} placeholder="Digite seu E-mail..." value={email} type="text" >
         </s.Input>
-        <s.Label htmlFor="">Telefone</s.Label>
+        <s.Label htmlFor="">Telefone :</s.Label>
         <s.Input onChange={(e) => settelefone(e.target.value)} placeholder="Digite seu Telefone..." value={telefone} type="text" >
         </s.Input>
         <s.Button onClick={() => mascara()}>adicionar</s.Button>

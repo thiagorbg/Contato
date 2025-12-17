@@ -41,6 +41,9 @@ const ContatosSliceReducer = createSlice({
 
     },
       add: (state, action: PayloadAction<Contatos>) => {
+        if (action.payload.nome.trim() === '') {
+          return
+        }
         state.itens.push(action.payload)
       },
       salvar: (state, action: PayloadAction<Contatos>) => {

@@ -7,7 +7,6 @@ import {useSelector}  from "react-redux"
 
 
 
-
 export const Cadastro = () => {
 
 const {itens} = useSelector((state: RootReducer) => state.Contatos)

@@ -42,11 +42,12 @@ const [campoNormalTel,setEditarCampoTel] = useState<string>('')
 
   return (
 
-  <li >
-      <h2>{nome}</h2>
+  <S.list>
+    <S.Div>
+      <S.Name>{nome}</S.Name>
       <S.InputName>Email :</S.InputName>
       <S.Campo onChange={ e => setEditarCampo(e.target.value)} disabled={!setEditar} value={campoNormal}> </S.Campo>
-      <S.InputName >Telefone</S.InputName>
+      <S.InputName >Telefone :</S.InputName>
       <S.Campo onChange={ e => setEditarCampoTel(e.target.value)} disabled={!setEditar} value={campoNormalTel}>  </S.Campo>
       {setEditar ?
       <>
@@ -62,15 +63,16 @@ const [campoNormalTel,setEditarCampoTel] = useState<string>('')
         setCancelar(false)
       }}
       >Salvar</s.Button>
-      <s.Button onClick={cancelarEdicao}>Cancelar</s.Button>
+      <s.CButton onClick={cancelarEdicao}>Cancelar</s.CButton>
       </>
       :
       <>
       <s.Button onClick={() => setCancelar(true)} >Editar</s.Button>
-      <s.Button onClick={() => dispatch(remover(id))}>Remover</s.Button>
+      <s.CButton onClick={() => dispatch(remover(id))}>Remover</s.CButton>
       </>
       }
-  </li>
+    </S.Div>
+  </S.list>
   )
 }
 
